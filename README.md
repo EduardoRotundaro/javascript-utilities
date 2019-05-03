@@ -2,24 +2,84 @@
 
 Some functions and constants for Javascript projects.
 
+---
+
 ## Formatters
 
-- Date
+Date
 
-- Date (time)
+```sh
+> dateFormat('DD/MM/AA, hh:mm.', new Date())
+02/05/19, 22:05.
+```
 
-- JSON
 
-- CPF
+Date (time)
 
-- CNPJ
+```sh
+> dateTime(new Date())
+À 2 minutos
+```
+
+
+JSON
+
+```sh
+> json("{"key":"value"}")
+{
+    key: "value"
+}
+```
+
+
+CPF
+
+```sh
+> cpf('01234567890')
+012.345.678-90
+```
+
+
+CNPJ
+
+```sh
+> cnpj('00000000000191')
+00.000.000/0001-91
+```
+
 
 ## Constants
 
-- Months
+Months
 
-- Months short
+```sh
+['Janeiro', 'Fevereiro', ...]
+```
 
-- Week days
 
-- Country states
+Months short
+
+```sh
+['Jan', 'Fev', ...]
+```
+
+
+Week days
+
+```sh
+['Domingo', 'Segunda-feira', ...]
+```
+
+
+Week days short
+
+```sh
+['Dom', 'Seg', ...]
+```
+
+
+Country states
+
+```sh
+['AC', 'AL', ...]
+```
