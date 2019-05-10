@@ -83,3 +83,20 @@ Country states
 ```sh
 ['AC', 'AL', ...]
 ```
+
+## Functions
+
+Check if is Number
+
+```sh
+> isNumber('123')
+true
+```
+
+
+Check if data is empty
+
+```sh
+> isEmpty({})
+true
+```
