@@ -13,3 +13,4 @@ export const isEmpty = (data) => {
     if( ( (typeof data) === 'object' || Array.isArray(data) ) && every(data, isEmpty ) ) return true; // { a: null, b: undefined }, [{}]
     return false;
 }
+

@@ -100,3 +100,5 @@ Check if data is empty
 > isEmpty({})
 true
 ```
+
+
