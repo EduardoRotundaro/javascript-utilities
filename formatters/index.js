@@ -1,4 +1,4 @@
-import { DAYS, DAYS_SHORT } from '../constants'
+import { DAYS, DAYS_SHORT, MONTHS, MONTHS_SHORT } from '../constants'
 
 export const dateTime = (date) =>{
     if(!date) return null
@@ -22,14 +22,17 @@ export const dateFormat = (format, date) => {
     try {
         let auxDate = format
 
-        auxDate = auxDate.replace( 'DD', ("0" + date.getDate()).slice(-2) )
-        auxDate = auxDate.replace( 'MM', ("0" + (date.getMonth()+1)).slice(-2) )
-        auxDate = auxDate.replace( 'AA', ("0" + date.getFullYear()).slice(-2) )
-        auxDate = auxDate.replace( 'hh', ("0" + date.getHours()).slice(-2) )
-        auxDate = auxDate.replace( 'mm', ("0" + date.getMinutes()).slice(-2) )
-        auxDate = auxDate.replace( 'ss', ("0" + date.getSeconds()).slice(-2) )
-        auxDate = auxDate.replace( 'ww', DAYS_SHORT[date.getDay()] )
-        auxDate = auxDate.replace( 'WW', DAYS[date.getDay()] )
+        auxDate = auxDate.replace( '$Dn', ("0" + date.getDate()).slice(-2) )
+        auxDate = auxDate.replace( '$Dl', DAYS_SHORT[date.getDay()] )
+        auxDate = auxDate.replace( '$DL', DAYS[date.getDay()] )
+        auxDate = auxDate.replace( '$Mn', ("0" + (date.getMonth()+1)).slice(-2) )
+        auxDate = auxDate.replace( '$Ml', MONTHS_SHORT[date.getMonth()] )
+        auxDate = auxDate.replace( '$ML', MONTHS[date.getMonth()] )
+        auxDate = auxDate.replace( '$Yn', ("0" + date.getFullYear()).slice(-2) )
+        auxDate = auxDate.replace( '$YN', date.getFullYear() )
+        auxDate = auxDate.replace( '$hn', ("0" + date.getHours()).slice(-2) )
+        auxDate = auxDate.replace( '$mn', ("0" + date.getMinutes()).slice(-2) )
+        auxDate = auxDate.replace( '$sn', ("0" + date.getSeconds()).slice(-2) )
 
         return auxDate
     } catch (error) {

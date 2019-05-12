@@ -9,7 +9,7 @@ Some functions and constants for Javascript projects.
 Date
 
 ```sh
-> dateFormat('DD/MM/AA, hh:mm.', new Date())
+> dateFormat('$Dn/$Mn/$Yn, $hn:$mn.', new Date())
 02/05/19, 22:05.
 ```
 
